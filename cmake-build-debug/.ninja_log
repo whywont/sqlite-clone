@@ -1,0 +1,4 @@
+# ninja log v5
+7	101	7138558934745450	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
+1	103	7138558934745450	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
+103	202	7138558935735459	sqlite-clone.exe	607dc7e8eebc67a0
