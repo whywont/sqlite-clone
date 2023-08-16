@@ -2,3 +2,8 @@
 7	101	7138558934745450	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
 1	103	7138558934745450	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
 103	202	7138558935735459	sqlite-clone.exe	607dc7e8eebc67a0
+14	146	7138633445432285	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
+9	147	7138633445432285	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
+8	97	7138635922339115	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
+3	89	7138636110859065	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
+90	353	7138636113473666	sqlite-clone.exe	4a2f3e40cd15edb2
