@@ -1,10 +1,15 @@
 # ninja log v5
 2	120	7139977889607012	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	d3db7dfd8eb711b5
-10	133	7139977889746993	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	f98f2c7f5d6a3505
 6	112	7139977889517047	CMakeFiles/sqlite-clone.dir/src/main.c.obj	ba66cad15b3d32cc
-133	351	7139977891886983	sqlite-clone.exe	4a2f3e40cd15edb2
-1	119	7139989364665972	build.ninja	9389e3707453dc6a
+10	133	7139977889746993	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	f98f2c7f5d6a3505
+2	90	7139989395910753	sqlite-clone.exe	4a2f3e40cd15edb2
+0	136	7140018286419279	build.ninja	9389e3707453dc6a
 2	89	7139987165655708	CMakeFiles/sqlite-clone.dir/test/test_runner.c.obj	edddcf178ea84f30
+10	185	7139995019424355	CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj	63caa575437a332b
 2	182	7139979069421997	CMakeFiles/sqlite-clone.dir/libs/unity/unity.c.obj	7620e69ee27dab62
 7	90	7139987165665706	CMakeFiles/sqlite-clone.dir/test/module_test.c.obj	b1eed41e1071dec2
-2	90	7139989395910753	sqlite-clone.exe	4a2f3e40cd15edb2
+2	78	7140016036224642	CMakeFiles/sqlite-tests.dir/test/test_runner.c.obj	36f0c5a1ac5758a5
+2	79	7140016457636816	CMakeFiles/sqlite-tests.dir/test/module_test.c.obj	4ffae941658426de
+78	170	7140017887469028	sqlite-tests.exe	d208ced69decac5c
+2	86	7140017666458793	CMakeFiles/sqlite-tests.dir/src/db_core/db_command.c.obj	c445145e4a6ada1
+2	78	7140017886579027	CMakeFiles/sqlite-tests.dir/src/buffer/input_buffer.c.obj	fcc6615e98c82865

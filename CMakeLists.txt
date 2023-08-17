@@ -15,6 +15,11 @@ add_executable(sqlite-tests test/test_runner.c
         test/module_test.c
         libs/unity/unity.c
         libs/unity/unity.h
+        test/module_test.h
+        src/db_core/db_command.h
+        src/db_core/db_command.c
+        src/buffer/input_buffer.h
+        src/buffer/input_buffer.c
 )
 
 include_directories(${PROJECT_SOURCE_DIR}/libs/unity)

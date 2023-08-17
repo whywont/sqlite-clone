@@ -118,6 +118,20 @@ build CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj: C_COMPILER__sqlite-tes
   OBJECT_DIR = CMakeFiles\sqlite-tests.dir
   OBJECT_FILE_DIR = CMakeFiles\sqlite-tests.dir\libs\unity
 
+build CMakeFiles/sqlite-tests.dir/src/db_core/db_command.c.obj: C_COMPILER__sqlite-tests_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/src/db_core/db_command.c || cmake_object_order_depends_target_sqlite-tests
+  DEP_FILE = CMakeFiles\sqlite-tests.dir\src\db_core\db_command.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
+  OBJECT_DIR = CMakeFiles\sqlite-tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\sqlite-tests.dir\src\db_core
+
+build CMakeFiles/sqlite-tests.dir/src/buffer/input_buffer.c.obj: C_COMPILER__sqlite-tests_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/src/buffer/input_buffer.c || cmake_object_order_depends_target_sqlite-tests
+  DEP_FILE = CMakeFiles\sqlite-tests.dir\src\buffer\input_buffer.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
+  OBJECT_DIR = CMakeFiles\sqlite-tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\sqlite-tests.dir\src\buffer
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sqlite-tests
@@ -126,7 +140,7 @@ build CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj: C_COMPILER__sqlite-tes
 #############################################
 # Link the executable sqlite-tests.exe
 
-build sqlite-tests.exe: C_EXECUTABLE_LINKER__sqlite-tests_Debug CMakeFiles/sqlite-tests.dir/test/test_runner.c.obj CMakeFiles/sqlite-tests.dir/test/module_test.c.obj CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj
+build sqlite-tests.exe: C_EXECUTABLE_LINKER__sqlite-tests_Debug CMakeFiles/sqlite-tests.dir/test/test_runner.c.obj CMakeFiles/sqlite-tests.dir/test/module_test.c.obj CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj CMakeFiles/sqlite-tests.dir/src/db_core/db_command.c.obj CMakeFiles/sqlite-tests.dir/src/buffer/input_buffer.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sqlite-tests.dir
