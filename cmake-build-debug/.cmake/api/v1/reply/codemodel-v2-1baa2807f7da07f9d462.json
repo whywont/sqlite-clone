@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -27,10 +28,11 @@
 					[
 						0
 					],
-					"name" : "untitled",
+					"name" : "sqlite-clone",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sqlite-clone::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sqlite-clone-Debug-77eaaeabfe333687f917.json",
+					"jsonFile" : "target-sqlite-clone-Debug-3afb50693cd8f47b288c.json",
 					"name" : "sqlite-clone",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sqlite-tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sqlite-tests-Debug-aa318ff2d48bf9abf9b6.json",
+					"name" : "sqlite-tests",
 					"projectIndex" : 0
 				}
 			]

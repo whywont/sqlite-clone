@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-project(untitled C)
+project(sqlite-clone C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -9,3 +9,13 @@ add_executable(sqlite-clone src/main.c
         src/db_core/db_command.h
         src/db_core/db_command.c
 )
+
+# For tests
+add_executable(sqlite-tests test/test_runner.c
+        test/module_test.c
+        libs/unity/unity.c
+        libs/unity/unity.h
+)
+
+include_directories(${PROJECT_SOURCE_DIR}/libs/unity)
+

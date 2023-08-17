@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: untitled
+# Project: sqlite-clone
 # Configurations: Debug
 # =============================================================================
 
@@ -52,18 +52,21 @@ build cmake_object_order_depends_target_sqlite-clone: phony || CMakeFiles/sqlite
 build CMakeFiles/sqlite-clone.dir/src/main.c.obj: C_COMPILER__sqlite-clone_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/src/main.c || cmake_object_order_depends_target_sqlite-clone
   DEP_FILE = CMakeFiles\sqlite-clone.dir\src\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
   OBJECT_DIR = CMakeFiles\sqlite-clone.dir
   OBJECT_FILE_DIR = CMakeFiles\sqlite-clone.dir\src
 
 build CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj: C_COMPILER__sqlite-clone_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/src/buffer/input_buffer.c || cmake_object_order_depends_target_sqlite-clone
   DEP_FILE = CMakeFiles\sqlite-clone.dir\src\buffer\input_buffer.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
   OBJECT_DIR = CMakeFiles\sqlite-clone.dir
   OBJECT_FILE_DIR = CMakeFiles\sqlite-clone.dir\src\buffer
 
 build CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj: C_COMPILER__sqlite-clone_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/src/db_core/db_command.c || cmake_object_order_depends_target_sqlite-clone
   DEP_FILE = CMakeFiles\sqlite-clone.dir\src\db_core\db_command.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
   OBJECT_DIR = CMakeFiles\sqlite-clone.dir
   OBJECT_FILE_DIR = CMakeFiles\sqlite-clone.dir\src\db_core
 
@@ -84,6 +87,54 @@ build sqlite-clone.exe: C_EXECUTABLE_LINKER__sqlite-clone_Debug CMakeFiles/sqlit
   TARGET_FILE = sqlite-clone.exe
   TARGET_IMPLIB = libsqlite-clone.dll.a
   TARGET_PDB = sqlite-clone.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target sqlite-tests
+
+
+#############################################
+# Order-only phony target for sqlite-tests
+
+build cmake_object_order_depends_target_sqlite-tests: phony || CMakeFiles/sqlite-tests.dir
+
+build CMakeFiles/sqlite-tests.dir/test/test_runner.c.obj: C_COMPILER__sqlite-tests_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/test/test_runner.c || cmake_object_order_depends_target_sqlite-tests
+  DEP_FILE = CMakeFiles\sqlite-tests.dir\test\test_runner.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
+  OBJECT_DIR = CMakeFiles\sqlite-tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\sqlite-tests.dir\test
+
+build CMakeFiles/sqlite-tests.dir/test/module_test.c.obj: C_COMPILER__sqlite-tests_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/test/module_test.c || cmake_object_order_depends_target_sqlite-tests
+  DEP_FILE = CMakeFiles\sqlite-tests.dir\test\module_test.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
+  OBJECT_DIR = CMakeFiles\sqlite-tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\sqlite-tests.dir\test
+
+build CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj: C_COMPILER__sqlite-tests_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity/unity.c || cmake_object_order_depends_target_sqlite-tests
+  DEP_FILE = CMakeFiles\sqlite-tests.dir\libs\unity\unity.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
+  OBJECT_DIR = CMakeFiles\sqlite-tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\sqlite-tests.dir\libs\unity
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target sqlite-tests
+
+
+#############################################
+# Link the executable sqlite-tests.exe
+
+build sqlite-tests.exe: C_EXECUTABLE_LINKER__sqlite-tests_Debug CMakeFiles/sqlite-tests.dir/test/test_runner.c.obj CMakeFiles/sqlite-tests.dir/test/module_test.c.obj CMakeFiles/sqlite-tests.dir/libs/unity/unity.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\sqlite-tests.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = sqlite-tests.exe
+  TARGET_IMPLIB = libsqlite-tests.dll.a
+  TARGET_PDB = sqlite-tests.exe.dbg
 
 
 #############################################
@@ -113,6 +164,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build sqlite-clone: phony sqlite-clone.exe
 
+build sqlite-tests: phony sqlite-tests.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -121,7 +174,7 @@ build sqlite-clone: phony sqlite-clone.exe
 #############################################
 # Folder: C:/Users/Andrew/CLionProjects/sqlite-clone/cmake-build-debug
 
-build all: phony sqlite-clone.exe
+build all: phony sqlite-clone.exe sqlite-tests.exe
 
 # =============================================================================
 # Built-in targets

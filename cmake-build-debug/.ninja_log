@@ -1,16 +1,10 @@
 # ninja log v5
-7	101	7138558934745450	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
-1	103	7138558934745450	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
-103	202	7138558935735459	sqlite-clone.exe	607dc7e8eebc67a0
-14	146	7138633445432285	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
-9	147	7138633445432285	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
-8	97	7138635922339115	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
-3	89	7138636110859065	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
-90	353	7138636113473666	sqlite-clone.exe	4a2f3e40cd15edb2
-15	256	7139101546914943	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
-25	257	7139101546914943	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
-8	102	7139444543177238	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
-2	95	7139584636872838	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
-8	102	7139584636962793	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
-2	100	7139588223782464	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
-100	201	7139588224772480	sqlite-clone.exe	4a2f3e40cd15edb2
+2	120	7139977889607012	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	d3db7dfd8eb711b5
+10	133	7139977889746993	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	f98f2c7f5d6a3505
+6	112	7139977889517047	CMakeFiles/sqlite-clone.dir/src/main.c.obj	ba66cad15b3d32cc
+133	351	7139977891886983	sqlite-clone.exe	4a2f3e40cd15edb2
+1	119	7139989364665972	build.ninja	9389e3707453dc6a
+2	89	7139987165655708	CMakeFiles/sqlite-clone.dir/test/test_runner.c.obj	edddcf178ea84f30
+2	182	7139979069421997	CMakeFiles/sqlite-clone.dir/libs/unity/unity.c.obj	7620e69ee27dab62
+7	90	7139987165665706	CMakeFiles/sqlite-clone.dir/test/module_test.c.obj	b1eed41e1071dec2
+2	90	7139989395910753	sqlite-clone.exe	4a2f3e40cd15edb2

@@ -128,7 +128,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=untitled
+CMAKE_PROJECT_NAME:STATIC=sqlite-clone
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/ranlib.exe
@@ -209,6 +209,15 @@ CMAKE_STRIP:FILEPATH=C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/strip
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+sqlite-clone_BINARY_DIR:STATIC=C:/Users/Andrew/CLionProjects/sqlite-clone/cmake-build-debug
+
+//Value Computed by CMake
+sqlite-clone_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+sqlite-clone_SOURCE_DIR:STATIC=C:/Users/Andrew/CLionProjects/sqlite-clone
 
 //Value Computed by CMake
 untitled_BINARY_DIR:STATIC=C:/Users/Andrew/CLionProjects/sqlite-clone/cmake-build-debug
