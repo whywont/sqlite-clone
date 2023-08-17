@@ -9,3 +9,8 @@
 90	353	7138636113473666	sqlite-clone.exe	4a2f3e40cd15edb2
 15	256	7139101546914943	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
 25	257	7139101546914943	CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj	fecd3e02a53ede4b
+8	102	7139444543177238	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
+2	95	7139584636872838	CMakeFiles/sqlite-clone.dir/src/main.c.obj	57ca218530fc46d4
+8	102	7139584636962793	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
+2	100	7139588223782464	CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj	fa3246f77bb6f815
+100	201	7139588224772480	sqlite-clone.exe	4a2f3e40cd15edb2

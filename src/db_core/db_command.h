@@ -5,15 +5,19 @@
 #include "../buffer/input_buffer.h"
 #ifndef UNTITLED_DB_COMMAND_H
 #define UNTITLED_DB_COMMAND_H
+
 typedef enum {
     META_COMMAND_SUCCESS,
     META_COMMAND_UNRECOGNIZED_COMMAND
 } MetaCommandResult;
 
 
-MetaCommandResult do_meta_command(InputBuffer* input_buffer);
 
-typedef enum { PREPARE_SUCCESS, PREPARE_UNRECOGNIZED_STATEMENT } PrepareResult;
+
+typedef enum { PREPARE_SUCCESS,
+               PREPARE_SYNTAX_ERROR,
+               PREPARE_UNRECOGNIZED_STATEMENT } PrepareResult;
+
 typedef enum { STATEMENT_INSERT, STATEMENT_SELECT } StatementType;
 
 
@@ -54,8 +58,18 @@ typedef struct {
 } Statement;
 
 
+typedef enum { EXECUTE_SUCCESS, EXECUTE_TABLE_FULL } ExecuteResult;
 
+MetaCommandResult do_meta_command(InputBuffer* input_buffer, Table *table);
+
+void* row_slot(Table* table, uint32_t row_num);
+void serialize_row(Row* source, void* destination);
+void deserialize_row(void* source, Row* destination);
 
 PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement);
-void execute_statement(Statement* statement);
+ExecuteResult execute_statement(Statement* statement, Table* table);
+ExecuteResult execute_select(Statement* statement, Table* table);
+Table* new_table();
+void free_table(Table* table);
+void print_row(Row* row);
 #endif //UNTITLED_DB_COMMAND_H
