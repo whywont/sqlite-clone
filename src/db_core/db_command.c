@@ -14,7 +14,6 @@ const uint32_t ID_OFFSET = 0;
 const uint32_t USERNAME_OFFSET = ID_OFFSET + ID_SIZE;
 const uint32_t EMAIL_OFFSET = USERNAME_OFFSET + USERNAME_SIZE;
 const uint32_t ROW_SIZE = ID_SIZE + USERNAME_SIZE + EMAIL_SIZE;
-
 const uint32_t PAGE_SIZE = 4096;
 const uint32_t ROWS_PER_PAGE = PAGE_SIZE / ROW_SIZE;
 const uint32_t TABLE_MAX_ROWS = ROWS_PER_PAGE * TABLE_MAX_PAGES;
@@ -51,6 +50,7 @@ PrepareResult prepare_statement(InputBuffer* input_buffer,
 
 ExecuteResult execute_insert(Statement* statement, Table* table) {
     if (table->num_rows >= TABLE_MAX_ROWS) {
+
         return EXECUTE_TABLE_FULL;
     }
     Row* row_to_insert = &(statement->row_to_insert);
@@ -78,7 +78,6 @@ ExecuteResult execute_statement(Statement* statement,  Table* table) {
 
         case (STATEMENT_SELECT):
             return execute_select(statement, table);
-            break;
     }
 }
 

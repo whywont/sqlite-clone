@@ -7,9 +7,13 @@
 
 #endif //SQLITE_CLONE_MODULE_TEST_H
 
-void setUp(void);
-    // Set stuff up her
-void test_prepare_insert_statement(void);
+//void setUp(void);
 
-void tearDown(void);
+void test_prepare_insert_statement(void);
+void test_prepare_select_statement(void);
+void test_full_table(void);
+void test_full_length(void);
+
+
+//void tearDown(void);
     // Clean stuff up here

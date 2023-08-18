@@ -12,8 +12,6 @@ typedef enum {
 } MetaCommandResult;
 
 
-
-
 typedef enum { PREPARE_SUCCESS,
                PREPARE_SYNTAX_ERROR,
                PREPARE_UNRECOGNIZED_STATEMENT } PrepareResult;
@@ -36,7 +34,7 @@ extern const uint32_t USERNAME_OFFSET;
 extern const uint32_t EMAIL_OFFSET;
 
 extern const uint32_t PAGE_SIZE;
-#define TABLE_MAX_PAGES 100
+#define TABLE_MAX_PAGES 101
 extern const uint32_t ROWS_PER_PAGE;
 extern const uint32_t TABLE_MAX_ROWS;
 
@@ -48,8 +46,8 @@ typedef struct {
 
 typedef struct {
     uint32_t id;
-    char username[COLUMN_USERNAME_SIZE];
-    char email[COLUMN_EMAIL_SIZE];
+    char username[COLUMN_USERNAME_SIZE+1];
+    char email[COLUMN_EMAIL_SIZE+1];
     } Row;
 
 typedef struct {

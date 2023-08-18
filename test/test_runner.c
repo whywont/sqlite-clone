@@ -7,8 +7,10 @@
 
 int main(void) {
     UNITY_BEGIN();
-    test_prepare_insert_statement();
-    //RUN_TEST(test_function_should_do_blah);
+    RUN_TEST(test_prepare_insert_statement);
+    RUN_TEST(test_prepare_select_statement);
+    RUN_TEST(test_full_table);
+    RUN_TEST(test_full_length);
     // ... run other tests ...
 
     return UNITY_END();
