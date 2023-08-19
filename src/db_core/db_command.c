@@ -3,9 +3,13 @@
 //
 #include "../buffer/input_buffer.h"
 #include "db_command.h"
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h> // Needed for malloc and exit functions
+#include <io.h>
+#include <fcntl.h>
+#include <sys/stat.h>
 
 const uint32_t ID_SIZE = size_of_attribute(Row, id);
 const uint32_t USERNAME_SIZE = size_of_attribute(Row, username);
@@ -126,22 +130,52 @@ void deserialize_row(void* source, Row* destination) {
     }
 void* row_slot(Table* table, uint32_t row_num) {
     uint32_t page_num = row_num / ROWS_PER_PAGE;
-    void* page = table->pages[page_num];
-    if (page == NULL) {
-        // Allocate memory only when we try to access page
-        page = table->pages[page_num] = malloc(PAGE_SIZE);
-        }
+
+    void *page = get_page(table->pager, page_num);
     uint32_t row_offset = row_num % ROWS_PER_PAGE;
     uint32_t byte_offset = row_offset * ROW_SIZE;
+
     return page + byte_offset;
     }
+Pager* pager_open(const char* filename) {
 
-Table* new_table() {
-    Table* table = (Table*)malloc(sizeof(Table));
-    table->num_rows = 0;
-    for (uint32_t i = 0; i < TABLE_MAX_PAGES; i++) {
-        table->pages[i] = NULL;
+    int fd = open(filename,
+                  O_RDWR |      // Read/Write mode
+                  O_CREAT,  // Create file if it does not exist
+                  S_IWUSR |     // User write permission
+                  S_IRUSR   // User read permission
+    );
+
+    if (fd == -1) {
+        printf("Unable to open file\n");
+        exit(EXIT_FAILURE);
     }
+
+    //Seek gets file size by moving to end of position from start
+    off_t file_length = lseek(fd, 0, SEEK_END);
+
+    Pager* pager = malloc(sizeof(Pager));
+    pager->file_descriptor = fd;
+    pager->file_length = file_length;
+
+    for (uint32_t i = 0; i < TABLE_MAX_PAGES; i++) {
+        pager->pages[i] = NULL;
+    }
+
+    return pager;
+
+
+}
+
+
+Table* db_open(const char* filename) {
+    Pager* pager = pager_open(filename);
+    uint32_t num_rows = pager->file_length / ROW_SIZE;
+
+    Table* table = (Table*)malloc(sizeof(Table));
+    table->pager = pager;
+    table->num_rows = num_rows;
+
     return table;
     }
 

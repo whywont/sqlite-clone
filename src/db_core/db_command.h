@@ -1,11 +1,15 @@
 //
 // Created by Andrew on 8/15/2023.
 //
+
+//#include "../pager/pager.h"
+#ifndef UNTITLED_DB_COMMAND_H
+#define UNTITLED_DB_COMMAND_H
+
 #include <stdint.h>
 #include "../buffer/input_buffer.h"
 #include "../pager/pager.h"
-#ifndef UNTITLED_DB_COMMAND_H
-#define UNTITLED_DB_COMMAND_H
+
 
 typedef enum {
     META_COMMAND_SUCCESS,
@@ -40,6 +44,13 @@ extern const uint32_t PAGE_SIZE;
 #define TABLE_MAX_PAGES 101
 extern const uint32_t ROWS_PER_PAGE;
 extern const uint32_t TABLE_MAX_ROWS;
+
+typedef struct {
+    int file_descriptor;
+    uint32_t file_length;
+    void* pages[TABLE_MAX_PAGES];
+} Pager;
+
 
 typedef struct {
     uint32_t num_rows;
