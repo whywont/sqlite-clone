@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sqlite-clone::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sqlite-clone-Debug-729ac9c6321b3c7ab4fb.json",
+					"jsonFile" : "target-sqlite-clone-Debug-e3c91ef39fb735329382.json",
 					"name" : "sqlite-clone",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "sqlite-tests::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sqlite-tests-Debug-cb095660e8573f442802.json",
+					"jsonFile" : "target-sqlite-tests-Debug-732f736e22e17345f92f.json",
 					"name" : "sqlite-tests",
 					"projectIndex" : 0
 				}

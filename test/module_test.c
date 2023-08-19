@@ -15,8 +15,10 @@ void setUp(void) {
 
 
 void test_prepare_insert_statement() {
+
+    char test_input[] = "insert 1 user1 person1@example.com";
     InputBuffer input;
-    input.buffer = "insert 1 user1 person1@example.com";
+    input.buffer = test_input;
     Statement statement;
 
     PrepareResult result = prepare_statement(&input, &statement);

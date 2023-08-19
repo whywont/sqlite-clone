@@ -70,6 +70,13 @@ build CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj: C_COMPILER__sqli
   OBJECT_DIR = CMakeFiles\sqlite-clone.dir
   OBJECT_FILE_DIR = CMakeFiles\sqlite-clone.dir\src\db_core
 
+build CMakeFiles/sqlite-clone.dir/src/pager/pager.c.obj: C_COMPILER__sqlite-clone_unscanned_Debug C$:/Users/Andrew/CLionProjects/sqlite-clone/src/pager/pager.c || cmake_object_order_depends_target_sqlite-clone
+  DEP_FILE = CMakeFiles\sqlite-clone.dir\src\pager\pager.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Andrew/CLionProjects/sqlite-clone/libs/unity
+  OBJECT_DIR = CMakeFiles\sqlite-clone.dir
+  OBJECT_FILE_DIR = CMakeFiles\sqlite-clone.dir\src\pager
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sqlite-clone
@@ -78,7 +85,7 @@ build CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj: C_COMPILER__sqli
 #############################################
 # Link the executable sqlite-clone.exe
 
-build sqlite-clone.exe: C_EXECUTABLE_LINKER__sqlite-clone_Debug CMakeFiles/sqlite-clone.dir/src/main.c.obj CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj
+build sqlite-clone.exe: C_EXECUTABLE_LINKER__sqlite-clone_Debug CMakeFiles/sqlite-clone.dir/src/main.c.obj CMakeFiles/sqlite-clone.dir/src/buffer/input_buffer.c.obj CMakeFiles/sqlite-clone.dir/src/db_core/db_command.c.obj CMakeFiles/sqlite-clone.dir/src/pager/pager.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sqlite-clone.dir

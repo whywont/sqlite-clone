@@ -8,6 +8,8 @@ add_executable(sqlite-clone src/main.c
         src/buffer/input_buffer.c
         src/db_core/db_command.h
         src/db_core/db_command.c
+        src/pager/pager.h
+        src/pager/pager.c
 )
 
 # For tests

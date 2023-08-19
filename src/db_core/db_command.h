@@ -3,6 +3,7 @@
 //
 #include <stdint.h>
 #include "../buffer/input_buffer.h"
+#include "../pager/pager.h"
 #ifndef UNTITLED_DB_COMMAND_H
 #define UNTITLED_DB_COMMAND_H
 
@@ -13,6 +14,8 @@ typedef enum {
 
 
 typedef enum { PREPARE_SUCCESS,
+               PREPARE_NEGATIVE_ID,
+               PREPARE_STRING_TOO_LONG,
                PREPARE_SYNTAX_ERROR,
                PREPARE_UNRECOGNIZED_STATEMENT } PrepareResult;
 
@@ -40,7 +43,7 @@ extern const uint32_t TABLE_MAX_ROWS;
 
 typedef struct {
     uint32_t num_rows;
-    void* pages[TABLE_MAX_PAGES];
+    Pager* pager;
     } Table;
 
 
@@ -64,6 +67,7 @@ void* row_slot(Table* table, uint32_t row_num);
 void serialize_row(Row* source, void* destination);
 void deserialize_row(void* source, Row* destination);
 
+PrepareResult prepare_insert(InputBuffer* input_buffer, Statement* statement);
 PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement);
 ExecuteResult execute_statement(Statement* statement, Table* table);
 ExecuteResult execute_select(Statement* statement, Table* table);
