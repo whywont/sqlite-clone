@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/untitled"
+			"value" : "C:/Program Files (x86)/sqlite-clone"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -1147,42 +1147,6 @@
 		},
 		{
 			"name" : "sqlite-clone_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/Andrew/CLionProjects/sqlite-clone"
-		},
-		{
-			"name" : "untitled_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/Andrew/CLionProjects/sqlite-clone/cmake-build-debug"
-		},
-		{
-			"name" : "untitled_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "untitled_SOURCE_DIR",
 			"properties" : 
 			[
 				{

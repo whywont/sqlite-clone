@@ -8,7 +8,7 @@
 
 #include <stdint.h>
 #include "../buffer/input_buffer.h"
-#include "../pager/pager.h"
+
 
 
 typedef enum {
@@ -41,7 +41,7 @@ extern const uint32_t USERNAME_OFFSET;
 extern const uint32_t EMAIL_OFFSET;
 
 extern const uint32_t PAGE_SIZE;
-#define TABLE_MAX_PAGES 101
+#define TABLE_MAX_PAGES 100
 extern const uint32_t ROWS_PER_PAGE;
 extern const uint32_t TABLE_MAX_ROWS;
 
@@ -82,7 +82,13 @@ PrepareResult prepare_insert(InputBuffer* input_buffer, Statement* statement);
 PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement);
 ExecuteResult execute_statement(Statement* statement, Table* table);
 ExecuteResult execute_select(Statement* statement, Table* table);
+
+//------------------------------------------
+
 Table* new_table();
+Pager* pager_open(const char* filename);
+Table* db_open(const char* filename);
+void db_close(Table* table);
 void free_table(Table* table);
 void print_row(Row* row);
 #endif //UNTITLED_DB_COMMAND_H
